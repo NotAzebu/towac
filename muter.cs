@@ -3,21 +3,21 @@ using System.Collections;
 
 public class muter : MonoBehaviour
 {
-    public AudioListener myAudioListener;
+    //public AudioListener myAudioListener;
 
 
     void Start()
     {
-        myAudioListener = Camera.main.GetComponent<AudioListener>();
+        //myAudioListener = GetComponent<AudioListener>();
         
     }
 
 
     void Update()
     {
-        if (Input.GetKeyUp(KeyCode.Space))
-        {
-            myAudioListener.volume = 0.0f;
-        }
+        //if (Input.GetKeyUp(KeyCode.Space))
+        //{
+            AudioListener.volume = 0.0f;
+        //}
     }
 }
