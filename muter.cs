@@ -8,7 +8,8 @@ public class muter : MonoBehaviour
 
     void Start()
     {
-        myAudioListener = GetComponent<AudioListener>();
+        myAudioListener = Camera.main.GetComponent<AudioListener>();
+        
     }
 
 
@@ -16,7 +17,7 @@ public class muter : MonoBehaviour
     {
         if (Input.GetKeyUp(KeyCode.Space))
         {
-            myAudioListener.enabled = !myAudioListener.enabled;
+            myAudioListener.volume = 0.0f;
         }
     }
 }
